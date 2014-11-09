@@ -1,0 +1,65 @@
+* {
+	color: #333;
+	font-family:  'Lato';
+	/* padding: 10px; */
+/* why did the reset override the lobster font below in the header selector?!? */
+}
+
+body {
+/* is there an advantage of using html over body for a selector other than browser default margins? */
+	background-image: url('/project2/images/nature.png');
+	background-size: cover;
+/* 	background image wasn't loading.  checked f12 and found that it was 403 (forbidden).  Checked permissions
+in terminal and found that only user could rw.  Group and other had no access.  chmod 744, no issues. */
+}
+
+header {
+	padding: 10px;
+	background-color: rgba(221, 221, 221, .7);
+	text-decoration: none;
+}
+
+/* had to create header h1 to set header font to lobster */
+header h1 {
+	font-family: 'Lobster';
+	padding: 5px;
+	font-size: 40px;
+	margin: 10px;
+}
+
+nav {
+	padding: 7px;
+	background-color: #333;
+	color: #ddd;
+/* why does removing the above color make the pipes disappear?!? */
+	font-weight: 800;
+	font-size: 20pt;
+}
+
+nav a {
+	text-decoration: none;
+	color: #ccc;
+}
+
+main {
+	background-color: rgba(221, 221, 221, .7);
+	border-radius: 10px;
+	padding: 20px;
+	margin: 10px;
+}
+
+/* form and main wouldn't work in passing down a fontsize to form, select, input, or button */
+select, button, input, label {
+	font-size: 1.5em;
+}
+
+/* did this to fix the width of the number input after removing max */
+input {
+	max-width: 2em;
+}
+
+footer p {
+/* had to add p to the footer selector for the color to be overridden.  Is footer != to * in overrides? */
+	color: rgba(221, 221, 221, .8);
+	margin: 5px;
+}
